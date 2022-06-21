@@ -1,0 +1,11 @@
+.uncompleted {
+    text-decoration: none;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+li:hover{
+    text-decoration: line-through;
+}

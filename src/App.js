@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useSelector, useDispatch } from "react-redux/es/exports";
+import { addtodos, removetodos } from "./components/redux/todoAction";
+import LishtComponent from "./components/LishtComponent";
+import React, { useRef, useState } from "react";
 
 function App() {
+  const inputRef = useRef();
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
+  console.log("Input =========");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <div></div>
+      <div>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            dispatch(addtodos({ Todo: inputRef.current.value , Time: Math.random()*5 }));
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <label htmlFor="todo">Enter Todo </label>
+          <input type="text" id="todo" ref={inputRef} ></input>
+        </form>
+      </div>
+     <LishtComponent/>
+    </>
   );
 }
 
