@@ -2,9 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { removetodos } from "./redux/todoAction";
-import { togal } from "./redux/todoAction";
 import Chip from "@mui/material/Chip";
-import  "./LishtComponent.css";
 
 import { Button } from "@mui/material";
 
@@ -15,20 +13,20 @@ function LishtComponent() {
   return (
     <ul>
       {state.map((data) => (
-        <li key={data.Time} id={data.Time} className="uncompleted">
+        <s><li key={data.Time}>
           {<span> </span>}
           {
             <Chip
               label={data.Todo}
               variant="outlined"
-              // onClick={dispatch(togal(data.Time))}
+              // onClick={dispatch}
               onDelete={() => {
                 dispatch(removetodos(data.Time));
               }}
             />
           }
         </li>
-        
+        </s>
       ))}
     </ul>
   );

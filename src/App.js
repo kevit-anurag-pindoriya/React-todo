@@ -17,7 +17,7 @@ function App() {
         <form
           onSubmit={(event) => {
             event.preventDefault();
-            dispatch(addtodos({ Todo: inputRef.current.value , Time: Math.random()*5 }));
+            dispatch(addtodos({ Todo: inputRef.current.value , Time: Math.random()*5  , Status : true }));
           }}
         >
           <label htmlFor="todo">Enter Todo </label>

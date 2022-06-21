@@ -1,16 +1,9 @@
-export const addtodos = (todos,flag) => ({
+export const addtodos = (todos) => ({
   type: "ADD_TODOS",
-  payload: todos,
-  status : flag
+  payload : todos
 });
 
 export const removetodos = (id) => ({
   type: "REMOVE_TODOS",
-  payload: id,
-});
-
-export const togal = (tog , flag) => ({
-  type: "TOGAL",
-  payload: tog,
-  status : flag
+  payload : id
 });

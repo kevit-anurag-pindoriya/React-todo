@@ -8,4 +8,5 @@
 
 li:hover{
     text-decoration: line-through;
+    color: rgb(49, 49, 49);
 }
