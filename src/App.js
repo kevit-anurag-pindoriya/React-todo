@@ -33,7 +33,7 @@ function App() {
         >
           <div className="input">
             
-            <input type="text" id="todo" placeholder="Enter To do " ref={inputRef}></input>
+            <input type="text" id="todo" placeholder="Enter Todo Here..." ref={inputRef}></input>
           </div>
         </form>
         
