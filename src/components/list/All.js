@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { removetodos, updatetodos } from "./../redux/todoAction";
 import Chip from "@mui/material/Chip";
 import "./../LishtComponent.css";
-import { Button } from "@mui/material";
+
 
 function All() {
   const state = useSelector((state) => state);
@@ -19,6 +19,9 @@ function All() {
       {<span> </span>}
       {
         <Chip
+        sx={{ m: 1 , pr : 4,pl : 4 }}
+        color="warning"
+        
           label={data.Todo}
           variant="outlined"
           onClick={() => dispatch(updatetodos(data.Time))}

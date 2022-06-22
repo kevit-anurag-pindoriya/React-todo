@@ -5,7 +5,7 @@ export const todoReducer = (state = init, action) => {
       return [...state, action.payload];
     case "REMOVE_TODOS":
       return state.filter((data) => {
-        return data.Time != action.payload;
+        return data.Time !== action.payload;
       });
     case "UPDATE_TODOS":
       return state.map((data) =>

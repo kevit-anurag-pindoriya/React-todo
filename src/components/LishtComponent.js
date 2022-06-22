@@ -14,7 +14,7 @@ function LishtComponent(props) {
   // const dispatch = useDispatch();
   // console.log(state);
   // console.log(props.status);
-  return <ul>{props.status=='all' && <All></All>}{props.status=='complited' && <Complited></Complited>}{props.status=='uncomplited' && <Uncomplited></Uncomplited>}</ul>;
+  return <ul class="flow">{props.status==='all' && <All></All>}{props.status==='complited' && <Complited></Complited>}{props.status==='uncomplited' && <Uncomplited></Uncomplited>}</ul>;
 }
 
 export default LishtComponent;

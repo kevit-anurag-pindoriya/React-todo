@@ -1,12 +1,45 @@
 .uncompleted {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.completed{
-    text-decoration: line-through;
+.completed {
+  text-decoration: line-through;
+}
+chip{
+    font-size: large;
 }
 
-li:hover{
-    text-decoration: line-through;
-    color: rgb(49, 49, 49);
+li:hover {
+  text-decoration: line-through;
+  color: rgb(49, 49, 49);
+  background-color: #dedad6;
+  border-radius: 7px;
 }
+.flow {
+  margin-top: 10%;
+  width: 60%;
+  height: 35rem;
+  overflow: scroll;
+  align-content: center;
+  flex-direction: column;
+  
+}
+::-webkit-scrollbar {
+    width: 6px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fdf7f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e44232; 
+  }
