@@ -3,7 +3,7 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { removetodos } from "./redux/todoAction";
 import Chip from "@mui/material/Chip";
-
+import './LishtComponent.css'
 import { Button } from "@mui/material";
 
 function LishtComponent() {
@@ -13,7 +13,7 @@ function LishtComponent() {
   return (
     <ul>
       {state.map((data) => (
-        <s><li key={data.Time}>
+        <li key={data.Time}>
           {<span> </span>}
           {
             <Chip
@@ -26,7 +26,7 @@ function LishtComponent() {
             />
           }
         </li>
-        </s>
+        
       ))}
     </ul>
   );
