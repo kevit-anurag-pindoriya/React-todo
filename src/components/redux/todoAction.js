@@ -7,3 +7,9 @@ export const removetodos = (id) => ({
   type: "REMOVE_TODOS",
   payload : id
 });
+
+
+export const updatetodos = (id) => ({
+  type: "UPDATE_TODOS",
+  payload : id
+});
